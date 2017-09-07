@@ -1,0 +1,19 @@
+def sum_to(n)
+  return 1 if n == 1
+  n + sum_to(n - 1)
+end
+
+
+def add_numbers(nums_array)
+
+  return nums_array if nums_array.length <= 1
+
+  nums_array.shift + add_numbers(nums_array[1..-1])
+
+end
+
+
+def reverse(string)
+  return string if string.length == 1
+  string[-1] + reverse(string[0..-2])
+end
